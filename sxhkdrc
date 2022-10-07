@@ -65,12 +65,13 @@ alt + u
 # 	brightnessctl s +10
 
 # XF86Audio{Lower/Raise/Mute}Volume
-super + F1
-	amixer set Master toggle
-super + F2
+
+F1
 	xbacklight -get -5
-super + F3
+F2
 	xbacklight -get +5
+F3
+	amixer set Master toggle
 
 # hide window
 super + g
