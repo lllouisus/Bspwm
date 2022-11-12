@@ -1,5 +1,5 @@
-super + Return
-	alacritty
+super + {_,shift +}Return
+    {alacritty, bspc rule -a \* -o rectangle=1200x800+400+120 state=floating && alacritty}
 
 super + space
    	bspc node @parent -R 90
@@ -11,12 +11,13 @@ super + Escape
 
 # rofi
 alt + l
-    rofi options -theme mine -show drun -show-icons
+    rofi -show drun -theme style-9.rasi
+
 alt + shift + l
-    rofi options -theme mine -show run -show-icons
-    # rofi options -theme mine -show window -show-icons
+    rofi -show run -theme style-9.rasi
+
 ctrl + alt + shift + l
-    rofi options -theme mine -show ssh -show-icons
+    rofi -show ssh -theme style-9.rasi
 
 super + {_,shift + }{1,2,3,4,5}
 	bspc {desktop -f,node -d} '^{1,2,3,4,5}'
@@ -45,7 +46,7 @@ ctrl + alt + shift + s
 /* alt + shift + p */
 
 alt + shift + y
-    /opt/./Qv2ray
+    /opt/Qv2ray/./Qv2ray
 
 alt + ctrl + l
 	slock
@@ -54,7 +55,7 @@ alt+ {_,shift +}k
     {screenkey -p fixed -g 50%x8%+25%-11%, killall screenkey}
 
 alt + u
-	thunar
+	pcmanfm
 
 #--------------------------------
 
@@ -95,7 +96,7 @@ super + alt + {F12,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + shift + w
+super + shift + ctrl + k
     bspc node -c
 
 /* super + {_,shift + }w */
